@@ -322,7 +322,22 @@ const SKILLS = [
     subtitle: "Genera guías Word con formato institucional y OA Mineduc",
     cat: "Educación en Chile",
     featured: true,
-    url: "https://github.com/proscar-cl/guia-matematica-skill",
+  },
+  {
+    name: "LaTeX Guía → PDF",
+    subtitle: "Genera documentos matemáticos en LaTeX y exporta a PDF",
+    cat: "Educación en Chile",
+    featured: true,
+    url: "https://github.com/oscraft2/skill-codex-claude",
+    cmd: "npx skills add https://github.com/oscraft2/skill-codex-claude --skill latex-guia-pdf",
+    uses: [
+      "Para crear guías, apuntes, pruebas o talleres con fórmulas matemáticas reales (no imágenes), editables en Word Math o Overleaf.",
+      "Para exportar automáticamente a PDF listo para imprimir, sin salir del agente.",
+      "Compatible con matemática escolar (7°-4° Medio) y universitaria: cálculo, álgebra lineal, ecuaciones diferenciales, estadística.",
+      "El .tex generado se puede abrir y editar en Overleaf, TeXstudio o VS Code con LaTeX Workshop."
+    ]
+  },
+  {
     cmd: "npx skills add https://github.com/proscar-cl/guia-matematica-skill --skill guia-matematica",
     uses: [
       "Para generar guías de matemática en formato Word (.docx) con el layout de dos columnas estilo PAES/SIMCE, a partir de un simple pedido en lenguaje natural.",
@@ -331,10 +346,38 @@ const SKILLS = [
       "Compatible con Claude (claude.ai) y Codex/ChatGPT via API o Code Interpreter."
     ]
   },
+  {
+    name: "Generador LaTeX para profes",
+    subtitle: "De lenguaje natural a .tex y .pdf listo para imprimir",
+    cat: "Educación en Chile",
+    featured: true,
+    url: "https://github.com/oscraft2/skill-codex-claude/tree/main/skills/latex-guia-pdf",
+    cmd: "npx skills add https://github.com/oscraft2/skill-codex-claude --skill latex-guia-pdf",
+    uses: [
+      "Para generar guías, apuntes, pruebas y talleres en LaTeX con fórmulas matemáticas REALES y editables — no imágenes — desde una descripción en lenguaje natural.",
+      "El .tex generado es compatible con Overleaf (online, gratis, sin instalar nada), pdflatex y xelatex. Ideal para matemática de enseñanza media, cálculo, álgebra lineal, estadística o cualquier asignatura con fórmulas.",
+      "Incluye cajas de teoría en azul, cajas de ejemplos en verde, ejercicios en dos columnas con alternativas A–E y tabla de soluciones — todo en un solo comando.",
+      "Compatible con Claude Code y Codex CLI. Los OA del Mineduc se etiquetan automáticamente usando oa_data/oa_matematica_1_4medio.json del mismo repositorio."
+    ]
+  },
 
   // ══════════════════════════════════════════════
   // ECOSISTEMA
   // ══════════════════════════════════════════════
+  {
+    name: "LaTeX Guía → PDF",
+    subtitle: "Genera documentos matemáticos en LaTeX y exporta a PDF",
+    cat: "Educación en Chile",
+    featured: true,
+    url: "https://github.com/oscraft2/skill-codex-claude",
+    cmd: "npx skills add https://github.com/oscraft2/skill-codex-claude --skill latex-guia-pdf",
+    uses: [
+      "Para crear guías, apuntes, pruebas o talleres con fórmulas matemáticas reales (no imágenes), editables en Word Math o Overleaf.",
+      "Para exportar automáticamente a PDF listo para imprimir, sin salir del agente.",
+      "Compatible con matemática escolar (7°-4° Medio) y universitaria: cálculo, álgebra lineal, ecuaciones diferenciales, estadística.",
+      "El .tex generado se puede abrir y editar en Overleaf, TeXstudio o VS Code con LaTeX Workshop."
+    ]
+  },
   {
     name: "Find skills",
     subtitle: "El gestor de paquetes del ecosistema",

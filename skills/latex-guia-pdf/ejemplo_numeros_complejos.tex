@@ -1,0 +1,222 @@
+\documentclass[11pt,a4paper]{article}
+
+%% Motor: xelatex (o sube el .tex a overleaf.com)
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setmainlanguage{spanish}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{geometry}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{hyperref}
+\usepackage{booktabs}
+
+\geometry{top=2cm,bottom=2.2cm,left=2cm,right=2cm}
+
+%% Colores
+\definecolor{azulp}{RGB}{0,90,160}
+\definecolor{azulc}{RGB}{220,235,250}
+\definecolor{verde}{RGB}{0,130,90}
+\definecolor{grisf}{RGB}{248,248,248}
+\definecolor{gris}{gray}{0.5}
+
+%% Cajas tcolorbox
+\tcbuselibrary{skins,breakable}
+\newtcolorbox{cajat}[1][Teoría]{enhanced,breakable,
+  colback=azulc,colframe=azulp,
+  fonttitle=\bfseries\color{white},coltitle=white,
+  attach boxed title to top left={yshift=-2mm,xshift=4mm},
+  boxed title style={colback=azulp},
+  title={#1},arc=4pt,boxrule=0.8pt,
+  left=6pt,right=6pt,top=6pt,bottom=6pt}
+
+\newtcolorbox{cajae}[1][Ejemplo resuelto]{enhanced,breakable,
+  colback=grisf,colframe=verde,
+  fonttitle=\bfseries\color{white},coltitle=white,
+  attach boxed title to top left={yshift=-2mm,xshift=4mm},
+  boxed title style={colback=verde},
+  title={#1},arc=4pt,boxrule=0.8pt,
+  left=6pt,right=6pt,top=6pt,bottom=6pt}
+
+%% Encabezado y pie
+\pagestyle{fancy}\fancyhf{}
+\lhead{\small\textbf{Departamento de Matemática}}
+\rhead{\small 3° Medio --- Matemática}
+\lfoot{\small\textit{proscar.cl}}
+\rfoot{\small Página \thepage\ de \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+
+\begin{document}
+\begin{center}\large\textbf{Departamento de Matemática}\end{center}
+\vspace{-2mm}
+\begin{center}
+\begin{tabular}{|p{7cm}|p{5cm}|p{3cm}|}
+\hline
+\textbf{Nombre:} & \textbf{Nivel:} 3° Medio & \textbf{Fecha:} 2026 \\\\
+\hline
+\textbf{Unidad:} Números Complejos & \multicolumn{2}{l|}{\textbf{Asig.:} Matemática} \\
+\hline
+\end{tabular}
+\end{center}
+\vspace{2mm}
+\begin{center}\textbf{\Large Guia N°1 --- Números Complejos}\\\normalsize\textit{3° Medio}\\\small OA: \texttt{FG-MATE-3M-OAC-01}\end{center}
+\vspace{2mm}
+\begin{cajat}[UNIDAD IMAGINARIA Y POTENCIAS DE $i$]
+No existe ningún número real $x$ tal que $x^2 = -1$. Definimos la \textbf{unidad imaginaria} $i$:
+\[ i^2 = -1 \qquad i = \sqrt{-1} \]
+
+\textbf{Ciclo de potencias (período 4):}
+\[ i^1=i,\quad i^2=-1,\quad i^3=-i,\quad i^4=1 \]
+En general $i^{4k}=1$ para todo $k\in\mathbb{Z}$.
+\end{cajat}
+
+\begin{cajae}[Ejemplo resuelto]
+Calcular $i^{235}$.\newline $235 = 4\cdot 58 + 3 \Rightarrow i^{235} = i^3 = -i$
+\end{cajae}
+
+\textbf{Ejercicios}
+
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{\arabic*.},start=1]
+\item El valor de $i^{100}$ es:
+\begin{tabbing}
+\hspace{0.5cm}\=\hspace{3.5cm}\=\kill
+\textbf{A)} $1$ \> \textbf{D)} $-i$ \\
+\textbf{B)} $-1$ \> \textbf{E)} $0$ \\
+\textbf{C)} $i$ \\
+\end{tabbing}
+\item La expresión $i+i^2+i^3+i^4$ equivale a:
+\begin{tabbing}
+\hspace{0.5cm}\=\hspace{3.5cm}\=\kill
+\textbf{A)} $4i$ \> \textbf{D)} $-1$ \\
+\textbf{B)} $1$ \> \textbf{E)} $4$ \\
+\textbf{C)} $0$ \\
+\end{tabbing}
+\item Si $n$ es múltiplo de 4, entonces $i^n$ es:
+\begin{tabbing}
+\hspace{0.5cm}\=\hspace{3.5cm}\=\kill
+\textbf{A)} $i$ \> \textbf{D)} $1$ \\
+\textbf{B)} $-i$ \> \textbf{E)} $0$ \\
+\textbf{C)} $-1$ \\
+\end{tabbing}
+\end{enumerate}
+\end{multicols}
+
+\vspace{4mm}
+\begin{cajat}[NÚMERO COMPLEJO $z = a + bi$]
+Un número $z = a+bi$ con $a,b\in\mathbb{R}$ es un \textbf{número complejo}.
+
+\begin{itemize}[leftmargin=1.5em]
+  \item $\operatorname{Re}(z)=a$\ (parte real)
+  \item $\operatorname{Im}(z)=b$\ (parte imaginaria)
+  \item $|z|=\sqrt{a^2+b^2}$\ (módulo)
+  \item $\bar{z}=a-bi$\ (conjugado)
+\end{itemize}
+\end{cajat}
+
+\begin{cajae}[Ejemplo resuelto]
+Sea $z=3+4i$. Calcular $|z|$.
+\[ |z|=\sqrt{3^2+4^2}=\sqrt{25}=5 \]
+\end{cajae}
+
+\textbf{Ejercicios}
+
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{\arabic*.},start=4]
+\item La parte imaginaria de $z = 1-2i$ es:
+\begin{tabbing}
+\hspace{0.5cm}\=\hspace{3.5cm}\=\kill
+\textbf{A)} $-2i$ \> \textbf{D)} $2$ \\
+\textbf{B)} $1$ \> \textbf{E)} $-1$ \\
+\textbf{C)} $-2$ \\
+\end{tabbing}
+\item Si $z=5+12i$, entonces $|z|$ es:
+\begin{tabbing}
+\hspace{0.5cm}\=\hspace{3.5cm}\=\kill
+\textbf{A)} $17$ \> \textbf{D)} $169$ \\
+\textbf{B)} $13$ \> \textbf{E)} $7$ \\
+\textbf{C)} $\sqrt{119}$ \\
+\end{tabbing}
+\item El conjugado de $z=-3+7i$ es:
+\begin{tabbing}
+\hspace{0.5cm}\=\hspace{3.5cm}\=\kill
+\textbf{A)} $3+7i$ \> \textbf{D)} $-7+3i$ \\
+\textbf{B)} $-3-7i$ \> \textbf{E)} $7-3i$ \\
+\textbf{C)} $3-7i$ \\
+\end{tabbing}
+\end{enumerate}
+\end{multicols}
+
+\vspace{4mm}
+\begin{cajat}[OPERACIONES CON COMPLEJOS]
+Sean $z_1=a+bi$ y $z_2=c+di$:
+
+\textbf{Adición:} $z_1+z_2=(a+c)+(b+d)i$
+
+\textbf{Multiplicación:}
+\[ z_1\cdot z_2=(ac-bd)+(ad+bc)i \]
+
+\textbf{División} (amplificar por el conjugado):
+\[ \frac{z_1}{z_2}=\frac{z_1\cdot\bar{z}_2}{|z_2|^2} \]
+\end{cajat}
+
+\begin{cajae}[Ejemplo resuelto]
+Calcular $(2+3i)(1-i)$.
+\[ (2+3i)(1-i)=2-2i+3i-3i^2=2+i+3=5+i \]
+\end{cajae}
+
+\textbf{Ejercicios}
+
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{\arabic*.},start=7]
+\item Si $u=2+3i$ y $v=-5+4i$, entonces $u+v$ es:
+\begin{tabbing}
+\hspace{0.5cm}\=\hspace{3.5cm}\=\kill
+\textbf{A)} $-3+7i$ \> \textbf{D)} $7-3i$ \\
+\textbf{B)} $3+7i$ \> \textbf{E)} $2+4i$ \\
+\textbf{C)} $-3-7i$ \\
+\end{tabbing}
+\item El producto $(1+i)(1-i)$ es:
+\begin{tabbing}
+\hspace{0.5cm}\=\hspace{3.5cm}\=\kill
+\textbf{A)} $0$ \> \textbf{D)} $-2$ \\
+\textbf{B)} $2i$ \> \textbf{E)} $1+2i$ \\
+\textbf{C)} $2$ \\
+\end{tabbing}
+\item El valor de $\dfrac{1}{i}$ es:
+\begin{tabbing}
+\hspace{0.5cm}\=\hspace{3.5cm}\=\kill
+\textbf{A)} $1$ \> \textbf{D)} $-1$ \\
+\textbf{B)} $i$ \> \textbf{E)} $0$ \\
+\textbf{C)} $-i$ \\
+\end{tabbing}
+\end{enumerate}
+\end{multicols}
+
+\vspace{4mm}
+\vspace{4mm}
+\begin{center}\textbf{Soluciones}\end{center}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} \\
+\hline
+A & C & D & C & B & B & A & C \\
+\hline
+\textbf{9} \\
+\hline
+C \\
+\hline
+\end{tabular}
+\end{center}
+
+\vfill
+\begin{center}\small\color{gris}Generado con \texttt{latex-guia-pdf} $\cdot$ \href{https://proscar.cl}{proscar.cl}\end{center}
+\end{document}
