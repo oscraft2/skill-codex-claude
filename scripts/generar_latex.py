@@ -17,6 +17,8 @@ BASE_DIR = Path(__file__).parent.parent
 OUT_DIR  = BASE_DIR / "output"
 OUT_DIR.mkdir(exist_ok=True)
 
+LETRAS = ["A","B","C","D","E"]
+
 # ── Ejemplo integrado ────────────────────────────────────────────────────────
 EJEMPLO = {
     "institucion":  "",
@@ -111,7 +113,28 @@ EJEMPLO = {
     }
 }
 
-LETRAS = ["A","B","C","D","E"]
+
+def alternativas_latex(alts: list) -> str:
+    """
+    Genera alternativas A–E en UNA sola fila horizontal.
+    Usa minipage para que quepan en el ancho disponible.
+    Esto funciona tanto dentro como fuera de multicols.
+    """
+    n = len(alts)
+    if n == 0:
+        return ""
+    # Ancho de cada minipage: dividimos el 98% del linewidth
+    ancho = f"{0.98/n:.3f}"
+    linea = r"\noindent"
+    for i, alt in enumerate(alts):
+        letra = LETRAS[i] if i < len(LETRAS) else str(i+1)
+        linea += (
+            rf"\begin{{minipage}}{{{ancho}\linewidth}}"
+            rf"\textbf{{{letra})}}\ {alt}"
+            r"\end{minipage}"
+        )
+    linea += "\n"
+    return linea
 
 
 def build_latex(g: dict) -> str:
@@ -134,7 +157,6 @@ def build_latex(g: dict) -> str:
 \setmainlanguage{spanish}
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{geometry}
-\usepackage{multicol}
 \usepackage{enumitem}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
@@ -193,14 +215,13 @@ def build_latex(g: dict) -> str:
     enc += r"\vspace{-2mm}"+"\n"
     enc += r"\begin{center}"+"\n"
     enc += r"\begin{tabular}{|p{7cm}|p{5cm}|p{3cm}|}"+"\n"+r"\hline"+"\n"
-    enc += rf"\\textbf{{Nombre:}} & \\textbf{{Nivel:}} {nivel} & \\textbf{{Fecha:}} {fecha} \\\\"+"\n"
-    enc = enc.replace("\\\\textbf", "\\textbf")
+    enc += rf"\textbf{{Nombre:}} & \textbf{{Nivel:}} {nivel} & \textbf{{Fecha:}} {fecha} \\"+"\n"
     enc += r"\hline"+"\n"
     enc += rf"\textbf{{Unidad:}} {tema} & \multicolumn{{2}}{{l|}}{{\textbf{{Asig.:}} {asig}}} \\"+"\n"
     enc += r"\hline"+"\n"
     enc += r"\end{tabular}"+"\n"+r"\end{center}"+"\n"+r"\vspace{2mm}"+"\n"
 
-    # Título principal
+    # Título
     tit = rf"\begin{{center}}\textbf{{\Large {tipo} N°{num} --- {tema}}}"
     if nivel:
         tit += rf"\\\normalsize\textit{{{nivel}}}"
@@ -212,54 +233,42 @@ def build_latex(g: dict) -> str:
     cuerpo = ""
     n = 1
     for b in g.get("bloques", []):
-        titulo_b = b.get("titulo","")
-        teoria   = b.get("teoria","")
-        tej      = b.get("titulo_ejemplo","Ejemplo resuelto")
-        ej       = b.get("ejemplo","")
-        ejers    = b.get("ejercicios",[])
+        titulo_b = b.get("titulo", "")
+        teoria   = b.get("teoria", "")
+        tej      = b.get("titulo_ejemplo", "Ejemplo resuelto")
+        ej       = b.get("ejemplo", "")
+        ejers    = b.get("ejercicios", [])
 
         if teoria:
             cuerpo += rf"\begin{{cajat}}[{titulo_b}]"+"\n"+teoria+"\n"+r"\end{cajat}"+"\n\n"
         if ej:
             cuerpo += rf"\begin{{cajae}}[{tej}]"+"\n"+ej+"\n"+r"\end{cajae}"+"\n\n"
+
         if ejers:
             cuerpo += r"\textbf{Ejercicios}"+"\n\n"
-            cuerpo += r"\begin{multicols}{2}"+"\n"
             cuerpo += r"\begin{enumerate}[label=\textbf{\arabic*.},start="+str(n)+"]\n"
             for e in ejers:
-                enun = e.get("enunciado","")
-                alts = e.get("alternativas",[])
-                cuerpo += rf"\item {enun}"+"\n"
+                enun = e.get("enunciado", "")
+                alts = e.get("alternativas", [])
+                cuerpo += rf"\item {enun}\\[2pt]"+"\n"
                 if alts:
-                    # Usar tabular para las alternativas (evita conflictos con math mode)
-                    cuerpo += r"\begin{tabbing}"+"\n"
-                    cuerpo += r"\hspace{0.5cm}\=\hspace{3.5cm}\=\kill"+"\n"
-                    # Partir en dos columnas manuales
-                    pairs = list(zip(LETRAS, alts))
-                    mid = (len(pairs)+1)//2
-                    for i, (letra, alt) in enumerate(pairs):
-                        if i < mid:
-                            siguiente = pairs[i+mid] if i+mid < len(pairs) else None
-                            if siguiente:
-                                l2,a2 = siguiente
-                                cuerpo += rf"\textbf{{{letra})}} {alt} \> \textbf{{{l2})}} {a2} \\"+"\n"
-                            else:
-                                cuerpo += rf"\textbf{{{letra})}} {alt} \\"+"\n"
-                    cuerpo += r"\end{tabbing}"+"\n"
+                    cuerpo += alternativas_latex(alts)
+                cuerpo += r"\vspace{4pt}"+"\n"
                 n += 1
-            cuerpo += r"\end{enumerate}"+"\n"+r"\end{multicols}"+"\n\n"
+            cuerpo += r"\end{enumerate}"+"\n\n"
+
         cuerpo += r"\vspace{4mm}"+"\n"
 
     # ── Tabla de soluciones ───────────────────────────────────────────────────
     sol = ""
-    sols = g.get("soluciones",{})
+    sols = g.get("soluciones", {})
     if sols:
         items  = list(sols.items())
-        grupos = [items[i:i+8] for i in range(0,len(items),8)]
+        grupos = [items[i:i+8] for i in range(0, len(items), 8)]
         sol += r"\vspace{4mm}"+"\n"
         sol += r"\begin{center}\textbf{Soluciones}\end{center}"+"\n"
         sol += r"\begin{center}"+"\n"
-        ncols = min(8,len(items))
+        ncols = min(8, len(items))
         sol += r"\begin{tabular}{|"+"c|"*ncols+"}\n"+r"\hline"+"\n"
         for grupo in grupos:
             sol += " & ".join([rf"\textbf{{{k}}}" for k,_ in grupo])+r" \\"+"\n"
@@ -286,7 +295,7 @@ def compilar(tex: Path) -> bool:
         print("⚠️  Sin compilador LaTeX local.")
         print("   → Sube el .tex a https://overleaf.com (gratis, sin instalar nada)")
         return False
-    cmd = [exe,"-interaction=nonstopmode",f"-output-directory={tex.parent}",str(tex)]
+    cmd = [exe, "-interaction=nonstopmode", f"-output-directory={tex.parent}", str(tex)]
     for _ in range(2):
         r = subprocess.run(cmd, capture_output=True, text=True)
     if r.returncode != 0:
@@ -315,11 +324,15 @@ def main():
     elif args.ejemplo:
         guia = EJEMPLO
     else:
-        guia = {"departamento":"Departamento de Matemática","tipo":args.tipo,
-                "numero":args.numero,"nivel":args.nivel,"asignatura":"Matemática",
-                "tema":args.tema,"fecha":"2026","bloques":[],"soluciones":{}}
+        guia = {
+            "departamento": "Departamento de Matemática",
+            "tipo": args.tipo, "numero": args.numero,
+            "nivel": args.nivel, "asignatura": "Matemática",
+            "tema": args.tema, "fecha": "2026",
+            "bloques": [], "soluciones": {}
+        }
 
-    nombre   = args.output or str(OUT_DIR/f"{guia.get('tema','doc').replace(' ','_')}_n{guia.get('numero',1)}")
+    nombre   = args.output or str(OUT_DIR / f"{guia.get('tema','doc').replace(' ','_')}_n{guia.get('numero',1)}")
     tex_path = Path(nombre+".tex")
 
     tex_path.write_text(build_latex(guia), encoding="utf-8")
@@ -329,11 +342,11 @@ def main():
         pdf = Path(nombre+".pdf")
         print(f"✅ PDF:   {pdf}")
         for ext in [".aux",".log",".out"]:
-            f=Path(nombre+ext)
+            f = Path(nombre+ext)
             if f.exists(): f.unlink()
     else:
         print(f"📄 Sube a Overleaf: https://overleaf.com/project/new")
     print(f"\n📁 Archivos en: {OUT_DIR}/")
 
-if __name__=="__main__":
+if __name__ == "__main__":
     main()
