@@ -3,6 +3,8 @@
 > Colección de skills para Claude Code, Codex CLI y cualquier agente compatible con el estándar open skills.  
 > Desarrollado por **[proscar.cl](https://proscar.cl)** — herramientas de IA para el aula chilena.
 
+📖 **[Wiki completa →](WIKI.md)** — Qué es una skill, cómo funciona, cómo crear una, FAQ y glosario.
+
 ---
 
 ## ¿Qué es una skill?
