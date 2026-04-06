@@ -1,0 +1,76 @@
+{
+  "asignatura": "Matemática",
+  "fuente": "Ministerio de Educación de Chile - Bases Curriculares",
+  "niveles": {
+    "4° Medio": {
+      "unidad": "Números y Álgebra",
+      "OA": [
+        {
+          "codigo": "OA1",
+          "descripcion": "Representar números complejos en forma binomial y cartesiana, reconociendo su parte real e imaginaria.",
+          "temas": ["unidad imaginaria", "forma binomial", "forma cartesiana", "parte real", "parte imaginaria"]
+        },
+        {
+          "codigo": "OA2",
+          "descripcion": "Operar con números complejos: adición, sustracción, multiplicación y división.",
+          "temas": ["adición", "sustracción", "multiplicación", "división", "conjugado", "módulo"]
+        },
+        {
+          "codigo": "OA3",
+          "descripcion": "Representar números complejos en el plano de Argand y calcular su módulo.",
+          "temas": ["plano de Argand", "módulo", "valor absoluto", "representación gráfica"]
+        }
+      ]
+    },
+    "3° Medio": {
+      "unidad": "Números y Álgebra",
+      "OA": [
+        {
+          "codigo": "OA1",
+          "descripcion": "Resolver ecuaciones e inecuaciones cuadráticas, reconociendo casos sin solución real.",
+          "temas": ["ecuaciones cuadráticas", "discriminante", "soluciones reales"]
+        }
+      ]
+    },
+    "2° Medio": {
+      "unidad": "Números y Álgebra",
+      "OA": [
+        {
+          "codigo": "OA1",
+          "descripcion": "Operar con potencias de exponente racional y expresiones radicales.",
+          "temas": ["potencias", "radicales", "racionalización"]
+        }
+      ]
+    },
+    "1° Medio": {
+      "unidad": "Números y Álgebra",
+      "OA": [
+        {
+          "codigo": "OA1",
+          "descripcion": "Operar con números racionales e irracionales.",
+          "temas": ["números racionales", "números irracionales", "operaciones"]
+        }
+      ]
+    },
+    "8° Básico": {
+      "unidad": "Números y Álgebra",
+      "OA": [
+        {
+          "codigo": "OA1",
+          "descripcion": "Representar y operar con potencias de base entera y exponente natural.",
+          "temas": ["potencias", "propiedades de potencias"]
+        }
+      ]
+    },
+    "7° Básico": {
+      "unidad": "Números y Álgebra",
+      "OA": [
+        {
+          "codigo": "OA1",
+          "descripcion": "Representar, describir y comparar los números enteros.",
+          "temas": ["números enteros", "valor absoluto", "recta numérica"]
+        }
+      ]
+    }
+  }
+}

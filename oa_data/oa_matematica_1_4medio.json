@@ -1,0 +1,295 @@
+{
+  "_meta": {
+    "fuente": "Currículum Nacional — Ministerio de Educación de Chile",
+    "url_base": "https://www.curriculumnacional.cl",
+    "fecha_extraccion": "2026-04-05",
+    "nota": "OA extraídos directamente de las páginas oficiales de cada nivel. Verificar en curriculumnacional.cl si se sospecha de cambios posteriores a esta fecha.",
+    "como_verificar": {
+      "1_medio": "https://www.curriculumnacional.cl/curriculum/7o-basico-2o-medio/matematica/1-medio",
+      "2_medio": "https://www.curriculumnacional.cl/curriculum/7o-basico-2o-medio/matematica/2-medio",
+      "3_medio": "https://www.curriculumnacional.cl/curriculum/3o-4o-medio/matematica-3o-medio/3-medio-fg",
+      "4_medio": "https://www.curriculumnacional.cl/curriculum/3o-4o-medio/matematica-4o-medio/4-medio-fg"
+    },
+    "bases_curriculares": {
+      "1_2_medio": "Bases Curriculares 7º Básico a 2º Medio (Decreto 614/2013 y 369/2015, vigentes desde 2017)",
+      "3_4_medio": "Bases Curriculares 3° y 4° Medio (vigentes desde 2020)"
+    }
+  },
+
+  "niveles": {
+
+    "1° Medio": {
+      "codigo_nivel": "1M",
+      "base_curricular": "Bases Curriculares 7°Básico a 2°Medio",
+      "url_oficial": "https://www.curriculumnacional.cl/curriculum/7o-basico-2o-medio/matematica/1-medio",
+      "ejes": ["Números", "Álgebra y funciones", "Geometría", "Probabilidad y estadística"],
+      "OA": [
+        {
+          "codigo": "MA1M OA 01",
+          "eje": "Números",
+          "descripcion": "Calcular operaciones con números racionales en forma simbólica.",
+          "url": "https://www.curriculumnacional.cl/curriculum/7o-basico-2o-medio/matematica/1-medio/ma1m-oa-01"
+        },
+        {
+          "codigo": "MA1M OA 02",
+          "eje": "Números",
+          "descripcion": "Mostrar que comprenden las potencias de base racional y exponente entero: transfiriendo propiedades de la multiplicación y división de potencias a los ámbitos numéricos correspondientes; relacionándolas con el crecimiento y decrecimiento de cantidades; resolviendo problemas de la vida diaria y otras asignaturas.",
+          "url": "https://www.curriculumnacional.cl/curriculum/7o-basico-2o-medio/matematica/1-medio/ma1m-oa-02"
+        },
+        {
+          "codigo": "MA1M OA 03",
+          "eje": "Álgebra y funciones",
+          "descripcion": "Desarrollar los productos notables de manera concreta, pictórica y simbólica: transformando productos en sumas y viceversa; aplicándolos a situaciones concretas; completando el cuadrado del binomio; utilizándolas en la reducción y desarrollo de expresiones algebraicas.",
+          "url": "https://www.curriculumnacional.cl/curriculum/7o-basico-2o-medio/matematica/1-medio/ma1m-oa-03"
+        },
+        {
+          "codigo": "MA1M OA 04",
+          "eje": "Álgebra y funciones",
+          "descripcion": "Resolver sistemas de ecuaciones lineales (2x2) relacionados con problemas de la vida diaria y de otras asignaturas, mediante representaciones gráficas y simbólicas, de manera manual y/o con software educativo.",
+          "url": "https://www.curriculumnacional.cl/curriculum/7o-basico-2o-medio/matematica/1-medio/ma1m-oa-04"
+        },
+        {
+          "codigo": "MA1M OA 05",
+          "eje": "Álgebra y funciones",
+          "descripcion": "Graficar relaciones lineales en dos variables de la forma f(x,y) = ax + by: creando tablas de valores; representando una ecuación lineal mediante un gráfico de manera manual y/o con software educativo; escribiendo la relación entre las variables de un gráfico dado.",
+          "url": "https://www.curriculumnacional.cl/curriculum/7o-basico-2o-medio/matematica/1-medio/ma1m-oa-05"
+        },
+        {
+          "codigo": "MA1M OA 06",
+          "eje": "Geometría",
+          "descripcion": "Desarrollar la fórmula de los valores del área y del perímetro de sectores y segmentos circulares, respectivamente, a partir de ángulos centrales de 60°, 90°, 120° y 180°, por medio de representaciones concretas.",
+          "url": "https://www.curriculumnacional.cl/curriculum/7o-basico-2o-medio/matematica/1-medio/ma1m-oa-06"
+        },
+        {
+          "codigo": "MA1M OA 07",
+          "eje": "Geometría",
+          "descripcion": "Desarrollar las fórmulas para encontrar el área de la superficie y el volumen del cono: desplegando la red del cono para la fórmula del área de superficie; experimentando de manera concreta para encontrar la relación entre el volumen del cilindro y el cono; aplicando las fórmulas a la resolución de problemas.",
+          "url": "https://www.curriculumnacional.cl/curriculum/7o-basico-2o-medio/matematica/1-medio/ma1m-oa-07"
+        },
+        {
+          "codigo": "MA1M OA 08",
+          "eje": "Geometría",
+          "descripcion": "Mostrar que comprenden el concepto de homotecia: relacionándola con la perspectiva y el funcionamiento de instrumentos ópticos; midiendo segmentos para determinar sus propiedades; aplicando propiedades de la homotecia en la construcción de objetos; resolviendo problemas de la vida cotidiana.",
+          "url": "https://www.curriculumnacional.cl/curriculum/7o-basico-2o-medio/matematica/1-medio/ma1m-oa-08"
+        },
+        {
+          "codigo": "MA1M OA 09",
+          "eje": "Geometría",
+          "descripcion": "Desarrollar el teorema de Tales mediante las propiedades de la homotecia, para aplicarlo en la resolución de problemas.",
+          "url": "https://www.curriculumnacional.cl/curriculum/7o-basico-2o-medio/matematica/1-medio/ma1m-oa-09"
+        },
+        {
+          "codigo": "MA1M OA 10",
+          "eje": "Geometría",
+          "descripcion": "Aplicar propiedades de semejanza y de proporcionalidad a modelos a escala y otras situaciones de la vida diaria y otras asignaturas.",
+          "url": "https://www.curriculumnacional.cl/curriculum/7o-basico-2o-medio/matematica/1-medio/ma1m-oa-10"
+        },
+        {
+          "codigo": "MA1M OA 11",
+          "eje": "Geometría",
+          "descripcion": "Representar el concepto de homotecia de forma vectorial, relacionándolo con el producto de un vector por un escalar, de manera manual y/o con software educativo.",
+          "url": "https://www.curriculumnacional.cl/curriculum/7o-basico-2o-medio/matematica/1-medio/ma1m-oa-11"
+        },
+        {
+          "codigo": "MA1M OA 12",
+          "eje": "Probabilidad y estadística",
+          "descripcion": "Registrar distribuciones de dos características distintas, de una misma población, en una tabla de doble entrada y en una nube de puntos.",
+          "url": "https://www.curriculumnacional.cl/curriculum/7o-basico-2o-medio/matematica/1-medio/ma1m-oa-12"
+        },
+        {
+          "codigo": "MA1M OA 13",
+          "eje": "Probabilidad y estadística",
+          "descripcion": "Comparar poblaciones mediante la confección de gráficos 'xy' para dos atributos de muestras, de manera concreta y pictórica: utilizando nubes de puntos en dos colores; separando la nube por medio de una recta trazada de manera intuitiva.",
+          "url": "https://www.curriculumnacional.cl/curriculum/7o-basico-2o-medio/matematica/1-medio/ma1m-oa-13"
+        },
+        {
+          "codigo": "MA1M OA 14",
+          "eje": "Probabilidad y estadística",
+          "descripcion": "Desarrollar las reglas de las probabilidades (regla aditiva, regla multiplicativa y la combinación de ambas) de manera concreta, pictórica y simbólica, de manera manual y/o con software educativo, en el contexto de la resolución de problemas.",
+          "url": "https://www.curriculumnacional.cl/curriculum/7o-basico-2o-medio/matematica/1-medio/ma1m-oa-14"
+        },
+        {
+          "codigo": "MA1M OA 15",
+          "eje": "Probabilidad y estadística",
+          "descripcion": "Mostrar que comprenden el concepto de azar: experimentando con la tabla de Galton y paseos aleatorios; realizando análisis estadísticos empezando por frecuencias relativas; utilizando probabilidades para describir el comportamiento azaroso; resolviendo problemas de la vida diaria.",
+          "url": "https://www.curriculumnacional.cl/curriculum/7o-basico-2o-medio/matematica/1-medio/ma1m-oa-15"
+        }
+      ]
+    },
+
+    "2° Medio": {
+      "codigo_nivel": "2M",
+      "base_curricular": "Bases Curriculares 7°Básico a 2°Medio",
+      "url_oficial": "https://www.curriculumnacional.cl/curriculum/7o-basico-2o-medio/matematica/2-medio",
+      "ejes": ["Números", "Álgebra y funciones", "Geometría", "Probabilidad y estadística"],
+      "OA": [
+        {
+          "codigo": "MA2M OA 01",
+          "eje": "Números",
+          "descripcion": "Realizar cálculos y estimaciones que involucren operaciones con números reales: utilizando la descomposición de raíces y las propiedades de las raíces; combinando raíces con números racionales; resolviendo problemas que involucren estas operaciones en contextos diversos.",
+          "url": "https://www.curriculumnacional.cl/portal/Ejes/Matematica/Numeros/81041:MA2M-OA-01"
+        },
+        {
+          "codigo": "MA2M OA 02",
+          "eje": "Números",
+          "descripcion": "Mostrar que comprenden los números reales y su representación en la recta numérica.",
+          "url": "https://www.curriculumnacional.cl/docentes/Educacion-General/Matematica-2-medio/MA2M-OA-02/81042:MA2M-OA-02"
+        },
+        {
+          "codigo": "MA2M OA 03",
+          "eje": "Álgebra y funciones",
+          "descripcion": "Mostrar que comprenden la función cuadrática f(x)= ax² + bx + c (a ≠ 0): reconociendo la función cuadrática f(x) = ax² en situaciones de la vida diaria y otras asignaturas; representándola en tablas y gráficos de manera manual y/o con software educativo.",
+          "url": "https://www.curriculumnacional.cl/portal/Ejes/Matematica/Algebra-y-funciones/81043:MA2M-OA-03"
+        },
+        {
+          "codigo": "MA2M OA 04",
+          "eje": "Álgebra y funciones",
+          "descripcion": "Resolver, de manera concreta, pictórica y simbólica, o usando herramientas tecnológicas, ecuaciones cuadráticas de la forma: ax² = b; (ax + b)² = c; ax² + bx = 0; ax² + bx = c (a, b, c son números racionales, a ≠ 0).",
+          "url": "https://www.curriculumnacional.cl/portal/Ejes/Matematica/Algebra-y-funciones/81044:MA2M-OA-04"
+        },
+        {
+          "codigo": "MA2M OA 05",
+          "eje": "Álgebra y funciones",
+          "descripcion": "Mostrar que comprenden la inversa de una función: utilizando la metáfora de una máquina; representándola por medio de tablas y gráficos; utilizando la reflexión de la función en el plano cartesiano; calculando las inversas de funciones lineales y cuadráticas.",
+          "url": "https://www.curriculumnacional.cl/portal/Ejes/Matematica/Algebra-y-funciones/81045:MA2M-OA-05"
+        },
+        {
+          "codigo": "MA2M OA 06",
+          "eje": "Álgebra y funciones",
+          "descripcion": "Explicar el cambio porcentual constante en intervalos de tiempo: por medio de situaciones de la vida real; identificándolo con el interés compuesto; expresándolo en forma recursiva f(t+1) - f(t) = a·f(t); resolviendo problemas de la vida diaria y otras asignaturas.",
+          "url": "https://www.curriculumnacional.cl/portal/Ejes/Matematica/Algebra-y-funciones/81046:MA2M-OA-06"
+        },
+        {
+          "codigo": "MA2M OA 07",
+          "eje": "Geometría",
+          "descripcion": "Desarrollar las fórmulas del área de la superficie y del volumen de la esfera: conjeturando la fórmula; representando de manera concreta y simbólica; resolviendo problemas de la vida diaria y de geometría.",
+          "url": "https://www.curriculumnacional.cl/portal/Ejes/Matematica/Geometria/81047:MA2M-OA-07"
+        },
+        {
+          "codigo": "MA2M OA 08",
+          "eje": "Geometría",
+          "descripcion": "Mostrar que comprenden las razones trigonométricas de seno, coseno y tangente en triángulos rectángulos: relacionándolas con las propiedades de la semejanza y los ángulos; explicándolas de manera pictórica y simbólica; aplicándolas para determinar ángulos o medidas de lados; resolviendo problemas geométricos y de otras asignaturas.",
+          "url": "https://www.curriculumnacional.cl/portal/Ejes/Matematica/Geometria/81048:MA2M-OA-08"
+        },
+        {
+          "codigo": "MA2M OA 09",
+          "eje": "Geometría",
+          "descripcion": "Aplicar las razones trigonométricas en diversos contextos, en la composición y descomposición de vectores y determinar las proyecciones de vectores.",
+          "url": "https://www.curriculumnacional.cl/portal/Ejes/Matematica/Geometria/81049:MA2M-OA-09"
+        },
+        {
+          "codigo": "MA2M OA 10",
+          "eje": "Probabilidad y estadística",
+          "descripcion": "Mostrar que comprenden las variables aleatorias finitas: definiendo la variable; determinando los posibles valores de la incógnita; calculando su probabilidad; graficando sus distribuciones.",
+          "url": "https://www.curriculumnacional.cl/portal/Ejes/Matematica/Probabilidad-y-estadistica/81050:MA2M-OA-10"
+        },
+        {
+          "codigo": "MA2M OA 11",
+          "eje": "Probabilidad y estadística",
+          "descripcion": "Utilizar permutaciones y la combinatoria sencilla para calcular probabilidades de eventos y resolver problemas.",
+          "url": "https://www.curriculumnacional.cl/portal/Ejes/Matematica/Probabilidad-y-estadistica/81051:MA2M-OA-11"
+        },
+        {
+          "codigo": "MA2M OA 12",
+          "eje": "Probabilidad y estadística",
+          "descripcion": "Mostrar que comprenden el rol de la probabilidad en la sociedad: revisando informaciones de los medios de comunicación; identificando suposiciones basadas en probabilidades; explicando cómo una probabilidad puede sustentar suposiciones opuestas; explicando decisiones basadas en situaciones subjetivas o en probabilidades.",
+          "url": "https://www.curriculumnacional.cl/portal/Ejes/Matematica/Probabilidad-y-estadistica/81052:MA2M-OA-12"
+        }
+      ]
+    },
+
+    "3° Medio": {
+      "codigo_nivel": "3M",
+      "base_curricular": "Bases Curriculares 3° y 4° Medio (Formación General)",
+      "url_oficial": "https://www.curriculumnacional.cl/curriculum/3o-4o-medio/matematica-3o-medio/3-medio-fg",
+      "nota_importante": "3° y 4° Medio tienen Bases Curriculares propias desde 2020. El código cambia a FG-MATE-3M-OAC-XX. Solo 4 OA de contenidos en 3° Medio FG.",
+      "OA": [
+        {
+          "codigo": "FG-MATE-3M-OAC-01",
+          "eje": "Números y Álgebra",
+          "descripcion": "Resolver problemas de adición, sustracción, multiplicación y división de números complejos C, en forma pictórica, simbólica y con uso de herramientas tecnológicas.",
+          "url": "https://www.curriculumnacional.cl/curriculum/3o-4o-medio/matematica-3o-medio/3-medio-fg/fg-mate-3m-oac-01"
+        },
+        {
+          "codigo": "FG-MATE-3M-OAC-02",
+          "eje": "Probabilidad y estadística",
+          "descripcion": "Tomar decisiones en situaciones de incerteza que involucren el análisis de datos estadísticos con medidas de dispersión y probabilidades condicionales.",
+          "url": "https://www.curriculumnacional.cl/curriculum/3o-4o-medio/matematica-3o-medio/3-medio-fg/fg-mate-3m-oac-02"
+        },
+        {
+          "codigo": "FG-MATE-3M-OAC-03",
+          "eje": "Álgebra y funciones",
+          "descripcion": "Aplicar modelos matemáticos que describen fenómenos o situaciones de crecimiento y decrecimiento, que involucran las funciones exponencial y logarítmica, de forma manuscrita, con uso de herramientas tecnológicas y promoviendo la búsqueda, selección, contrastación y verificación de información en ambientes digitales y redes sociales.",
+          "url": "https://www.curriculumnacional.cl/curriculum/3o-4o-medio/matematica-3o-medio/3-medio-fg/fg-mate-3m-oac-03"
+        },
+        {
+          "codigo": "FG-MATE-3M-OAC-04",
+          "eje": "Geometría",
+          "descripcion": "Resolver problemas de geometría euclidiana que involucran relaciones métricas entre ángulos, arcos, cuerdas y secantes en la circunferencia, de forma manuscrita y con uso de herramientas tecnológicas.",
+          "url": "https://www.curriculumnacional.cl/curriculum/3o-4o-medio/matematica-3o-medio/3-medio-fg/fg-mate-3m-oac-04"
+        }
+      ],
+      "OAH": [
+        {
+          "codigo": "FG-MATE-3y4-OAH-a",
+          "tipo": "Habilidad",
+          "descripcion": "Construir y evaluar estrategias de manera colaborativa al resolver problemas no rutinarios."
+        },
+        {
+          "codigo": "FG-MATE-3y4-OAH-b",
+          "tipo": "Habilidad",
+          "descripcion": "Resolver problemas que impliquen variar algunos parámetros en el modelo utilizado y observar cómo eso influye en los resultados obtenidos."
+        },
+        {
+          "codigo": "FG-MATE-3y4-OAH-c",
+          "tipo": "Habilidad",
+          "descripcion": "Tomar decisiones fundamentadas en evidencia estadística y/o en la evaluación de resultados obtenidos a partir de un modelo probabilístico."
+        },
+        {
+          "codigo": "FG-MATE-3y4-OAH-d",
+          "tipo": "Habilidad",
+          "descripcion": "Argumentar, utilizando lenguaje simbólico y diferentes representaciones, para justificar la veracidad o falsedad de una conjetura, y evaluar el alcance y los límites de los argumentos utilizados."
+        },
+        {
+          "codigo": "FG-MATE-3y4-OAH-e",
+          "tipo": "Habilidad",
+          "descripcion": "Construir modelos realizando conexiones entre variables para predecir posibles escenarios de solución a un problema, y tomar decisiones fundamentadas."
+        }
+      ]
+    },
+
+    "4° Medio": {
+      "codigo_nivel": "4M",
+      "base_curricular": "Bases Curriculares 3° y 4° Medio (Formación General)",
+      "url_oficial": "https://www.curriculumnacional.cl/curriculum/3o-4o-medio/matematica-4o-medio/4-medio-fg",
+      "nota_importante": "Solo 4 OA de contenidos en 4° Medio FG. Las habilidades (OAH) son compartidas con 3° Medio.",
+      "OA": [
+        {
+          "codigo": "FG-MATE-4M-OAC-01",
+          "eje": "Números y economía",
+          "descripcion": "Fundamentar decisiones en el ámbito financiero y económico personal o comunitario, a partir de modelos que consideren porcentajes, tasas de interés e índices económicos.",
+          "url": "https://www.curriculumnacional.cl/curriculum/3o-4o-medio/matematica-4o-medio/4-medio-fg/fg-mate-4m-oac-01"
+        },
+        {
+          "codigo": "FG-MATE-4M-OAC-02",
+          "eje": "Probabilidad y estadística",
+          "descripcion": "Fundamentar decisiones en situaciones de incerteza, a partir del análisis crítico de datos estadísticos y con base en los modelos binomial y normal.",
+          "url": "https://www.curriculumnacional.cl/curriculum/3o-4o-medio/matematica-4o-medio/4-medio-fg/fg-mate-4m-oac-02"
+        },
+        {
+          "codigo": "FG-MATE-4M-OAC-03",
+          "eje": "Álgebra y funciones",
+          "descripcion": "Construir modelos de situaciones o fenómenos de crecimiento, decrecimiento y periódicos que involucren funciones potencias de exponente entero y trigonométricas sen(x) y cos(x), de forma manuscrita, con uso de herramientas tecnológicas y promoviendo la búsqueda, selección, contrastación y verificación de información en ambientes digitales y redes sociales.",
+          "url": "https://www.curriculumnacional.cl/curriculum/3o-4o-medio/matematica-4o-medio/4-medio-fg/fg-mate-4m-oac-03"
+        },
+        {
+          "codigo": "FG-MATE-4M-OAC-04",
+          "eje": "Geometría analítica",
+          "descripcion": "Resolver problemas acerca de rectas y circunferencias en el plano, mediante su representación analítica, de forma manuscrita y con uso de herramientas tecnológicas.",
+          "url": "https://www.curriculumnacional.cl/curriculum/3o-4o-medio/matematica-4o-medio/4-medio-fg/fg-mate-4m-oac-04"
+        }
+      ],
+      "OAH": "Ver OAH en 3° Medio — son compartidos para 3° y 4° Medio FG (FG-MATE-3y4-OAH-a a e)"
+    }
+  }
+}
